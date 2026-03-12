@@ -13,4 +13,4 @@ function exibirNotaFinal (Nota) {
 console.log("Nota final: " + Nota);
 }
 // 4. Execução
-exibirNotaFinal(Nota calcularMedia(7, 10, 7));
+exibirNotaFinal(calcularMedia(7, 10, 7));
