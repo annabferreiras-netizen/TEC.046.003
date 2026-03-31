@@ -13,7 +13,7 @@ vendasRaw.map( venda => venda.produto);
 const set_produtos = new Set(array_produtos);
 console.log([...set_produtos]);
 // Criar Map produto -> preço
-const produtos = new Map();
+const produtosMap = new Map();
 vendasRaw.forEach (item => {
     produtosMap.set(item.produto, item.preco);
 });
@@ -21,7 +21,7 @@ console.log(produtosMap.get("Mousepad"))
 // Soma das vendas
 let totalCompra = 0;
 // produto.values() = [150, 80, 150, 900, 80, 30]
-for (let [produto, preco] of produtosMap.values()) {
-    totalCompra = totalCompra = preco;
+for (let preco of produtosMap.values()) {
+    totalCompra = totalCompra + preco;
 }
 console.log(totalCompra);
